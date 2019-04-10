@@ -1,0 +1,449 @@
+/* NOTE: style texte */
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* NOTE: style commun */
+.logoNG {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.logoOpaque {
+  margin-bottom: 1rem;
+  height: 30%;
+  width: 30%;
+  background-color: white;
+  border-radius: 25%;
+}
+
+.textSubtitle {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px white;
+}
+
+.nav-link {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 2px grey;
+}
+
+.nav-link a: hover {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.textPresentationOverlay {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: justify;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+
+/* NOTE: Style navbar */
+.navbar {
+  height: 100px;
+  background-color: transparent;
+  transition: 0.7s;
+}
+
+.navbar a:hover {
+  color: white;
+  background-color: rgba(35, 3, 5, 0.4);
+}
+
+.opaque {
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.7s;
+}
+
+/* NOTE: style titre du site */
+
+.textTitle {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  font-size: 3.5rem; /* Responsive font size */
+  font-weight: bold;
+  margin: 0 auto; /* Center the text container */
+  padding: 1rem;
+  width: 30%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 40%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+.textSubtitle {
+  top: 70%;
+  left: 50%;
+  font-weight: 3rem;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, -50%); /* Position text in the middle */
+}
+
+.textPresentation {
+  top: 65%;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, -50%); /* Position text in the middle */
+}
+
+/* NOTE: Style bloc de presentation de la home  avec effet parralax au schroll */
+.presentation {
+  background-image: url(../img/glenn-carstens-peters-203007-unsplash.jpg);
+  height: 500px; /* à changer plus tard car taille fixe */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* NOTE: style des sections avec effet overlay */
+
+.titleOverlay {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+.text a {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.text a:hover {
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+/* NOTE: style du Portfolio */
+
+.portfolioTitle {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+}
+
+.portfolio {
+  margin-top: 2.5rem;
+}
+
+.box {
+  border: 2px solid #fff;
+  box-shadow: 0 0 4px grey;
+  position: relative;
+}
+
+.box: before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0) linear-gradient(45deg, #141414 0%, #691100 40%, #1b1b1b 100%);
+  opacity: 0.3;
+  transition:all 0.5s ease;
+}
+
+.box img{
+  width:100%;
+  height: auto;
+}
+.box .box-content{
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 38px;
+  transition: all 0.35s ease 0s;
+}
+.box:hover .box-content{
+  background: rgba(0,0,0,0.6);
+}
+.box .box-content:after{
+  content: "";
+  border: 7px solid #fff;
+  position: absolute;
+  top:21px;
+  left: 20px;
+  right: 30px;
+  height: 35%;
+  transition: all 0.35s ease 0s;
+}
+.box:hover .box-content:after{
+  top:60%;
+}
+
+.box.box-content a {
+  text-decoration: none;
+  color: white;
+}
+
+.box .description a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.box .description a::after {
+  text-decoration: underline;
+  color: white;
+}
+
+.box .title {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px black;
+}
+
+.box .description{
+  position: relative;
+  top:5%;
+  color:#fff;
+  opacity:0;
+  transition: all 0.35s ease 0s;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px grey;
+  text-align: justify;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.box a {
+  text-decoration: none;
+}
+
+.box:hover .description{
+  top:30%;
+  opacity:1;
+}
+@media only screen and (max-width: 990px) {
+  .box{
+    margin-bottom:15px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .box .title{ font-size: 15px;}
+  .box .description{ font-size: 13px; }
+  .box:hover .description{ top:48%; }
+}
+
+/* NOTE: Style experience */
+
+.titleExperience {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.cntl-icon {
+  border-radius: 25% 10% !important;
+  width: 12% !important;
+  height: 17% !important;
+  background-color: #171738 !important;
+  border: solid 3px #808092 !important;
+  box-shadow: 0px 0px 19px -9px #000;
+}
+
+/* NOTE: Style footer */
+
+.footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.footer a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.fab {
+  color: white;
+  font-size: 2rem;
+}
+
+.fab:hover {
+  color: #1da1f2;
+}
+
+/* NOTE: skillbar */
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.containerSkill {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+  margin-bottom: 1rem;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding: 10px; /* Add some padding */
+  color: white; /* White text color */
+  margin-bottom: 1rem;
+}
+
+.skillTitle {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.skillsubTitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.cascade {
+  width: 80%;
+  background-color: #e06d10;
+}
+
+.agile {
+  width: 40%;
+  background-color: #e06d10;
+}
+
+.html {
+  width: 90%;
+  background-color: #2b818e;
+}
+
+.css {
+  width: 70%;
+  background-color: #2b818e;
+}
+
+.js {
+  width: 40%;
+  background-color: #2b818e;
+}
+
+.canvas {
+  width: 30%;
+  background-color: #2b818e;
+}
+
+.php {
+  width: 40%;
+  background-color: #2b818e;
+}
+
+.mysql {
+  width: 10%;
+  background-color: #2b818e;
+}
+
+.bootstrap {
+  width: 70%;
+  background-color: #da304c;
+}
+
+.jquery {
+  width: 30%;
+  background-color: #da304c;
+}
+
+.angularjs {
+  width: 30%;
+  background-color: #da304c;
+}
+
+.symfony {
+  width: 10%;
+  background-color: #da304c;
+}
+
+.ajax {
+  width: 10%;
+  background-color: #da304c;
+}
+
+.ezpublish {
+  width: 70%;
+  background-color: #8794c7;
+}
+
+.wordpress {
+  width: 50%;
+  background-color: #8794c7;
+}
+
+.drupal {
+  width: 30%;
+  background-color: #8794c7;
+}
+
+.prestashop {
+  width: 30%;
+  background-color: #8794c7;
+}
