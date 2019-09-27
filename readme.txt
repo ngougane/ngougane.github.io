@@ -1,3 +1,6 @@
+
+----- EN COURS DE RENOVATION ----- version alpha 
+
 <!-- NOTE: https://thomasbonometti.fr/projects -->
 <!-- NOTE: https://mdbootstrap.com/legacy/angular/6.0.1/?page=sections/intros -->
 
